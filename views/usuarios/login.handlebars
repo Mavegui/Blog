@@ -1,0 +1,23 @@
+<h2>Login </h2>
+<div class="card">
+  <div class="card-body">
+    <p class="lead mt-2">
+      Logue em sua conta e venha repassar seus conhecimentos para outros membros
+    </p>
+
+    <form action="/usuarios/login" method="POST">
+      <div class="form-floating mb-4">
+        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+        <label for="floatingInput">Email</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="password" name="senha" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Senha</label>
+      </div>
+
+      <button type="submit" name="button" class="btn btn-success mt-3">Entrar</button>
+    </form>
+
+  </div>
+</div>

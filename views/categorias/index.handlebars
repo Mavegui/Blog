@@ -1,0 +1,27 @@
+<h4>Categorias existentes: </h4>
+<hr>
+
+  <div class="card">
+   <div class="card-body">
+    <table class="table ">
+    <thead>
+      <tr>
+       <th scope="col">#</th>
+       <th scope="col">Categoria</th>
+       <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody>{{#each categorias}}
+      <tr>
+       <th scope="row"></th>
+       <td>{{nome}}</td>
+       <td><a href="/categorias/{{slug}}"><button type="button" class="btn btn-success btn-sm">Visualizar</button></a></td>
+      </tr>
+      {{else}}
+    </tbody>
+    </table>
+   </div>
+ </div>
+
+<h3>Nenhuma categoria existente!</h3>
+{{/each}}
