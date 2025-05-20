@@ -1,1 +1,36 @@
-node_modules
+# Ambiente virtual
+.venv/
+.env/
+ENV/
+env/
+
+# Arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Arquivos de log
+*.log
+
+# Configurações do VS Code
+.vscode/
+
+# Arquivos de banco de dados locais
+*.sqlite3
+*.db
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+# Arquivos de pacotes
+*.egg-info/
+dist/
+build/
+
+# Arquivos de testes
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/

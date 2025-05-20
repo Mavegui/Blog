@@ -1,0 +1,50 @@
+{% extends "blogs/base.html" %}
+
+{% block title %}
+    Index - Blog do Gui
+{% endblock %}
+
+{% block header %}
+    <header class="mt-3 shadow p-5 mb-5 bg-body rounded">
+        <h1 class="display-4 text-center">Dev Gui Blog</h1>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <main class="container mt-4">
+        {% if user.is_authenticated %}
+            <section>
+                <p class="h3 mt-3">
+                    Acesse postagens que você já criou.
+                    <a href="{% url 'categorias' %}" class="text-decoration-none">
+                        Clique aqui
+                    </a> para acessar as categorias existentes. 
+                    Aqui você verá as categorias de assuntos e a quantidade de postagens que existem em cada uma delas.
+                </p>
+            </section>
+        {% else %}
+            <section>
+                <p class="h3 mt-3">
+                    Olá, seja bem-vindo ao blog do Gui. <br>
+                    <a href="{% url 'register' %}" class="text-decoration-none">
+                        Crie uma conta
+                    </a> e acesse as postagens, interaja, comentando e dando sua opinião.
+                </p>
+
+                <p class="h3 mt-3">
+                    Acesse as 
+                    <a href="{% url 'categorias' %}" class="text-decoration-none">
+                        categorias
+                    </a> para ver as postagens organizadas por ela.
+                </p>
+
+                <p class="h3 mt-3">
+                    Se preferir ver as postagens diretamente, acesse a aba "
+                    <a href="{% url 'postagens' %}" class="text-decoration-none">
+                        Postagens
+                    </a>". Lá você encontrará todas as publicações disponíveis no blog.
+                </p>
+            </section>
+        {% endif %}
+    </main>
+{% endblock content %}

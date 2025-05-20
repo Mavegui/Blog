@@ -1,0 +1,28 @@
+{% extends "blogs/base.html" %}
+{% load bootstrap5 %}
+
+{% block title %}
+    Registrar - Blog do Gui
+{% endblock %}
+
+{% block header %}
+    <div class="mt-3 shadow p-5 mb-5 bg-body rounded">
+        <h1 class="display-4 text-center">Criar conta</h1>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        {% buttons %}
+        <button type="submit" class="btn btn-success">
+            Criar conta
+        </button>
+        {% endbuttons %}
+        
+        <input type="hidden" name="next" value="{% url 'index' %}"/>
+    </form>
+
+{% endblock content %}
